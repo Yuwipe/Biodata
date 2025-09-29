@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    }
+.biodata-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 30px;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    }
+.profile-pic {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3498db;
+    }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    }
+td {
+    padding: 8px;
+    }
+td:first-child {
+    font-weight: bold;
+    color: #555;
+    width: 35%;
+    }
