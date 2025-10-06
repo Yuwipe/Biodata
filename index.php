@@ -28,9 +28,10 @@ $hobbies = "Watching Anime, Online Games, Trading Card Games";
         <tr><td>Nationality:</td><td><?php echo $nationality; ?></td></tr>
         <tr><td>Education:</td><td><?php echo $education; ?></td></tr>
         <tr><td>Hobbies:</td><td><?php echo $hobbies; ?></td></tr>
+        <tr><td>Activities:</td><td><a href="activities.php" class="btn">View PHP Exercises</a></td></tr>
     </table>
 
-    <a href="activities.php" class="btn">View PHP Activities</a>
+    
 </div>
 
 </body>

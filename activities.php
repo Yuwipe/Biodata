@@ -35,8 +35,8 @@
 
 <?php
 // 1. Introduce Yourself
-$name = "John";
-$age = 20;
+$name = "Carl";
+$age = 27;
 $favColor = "blue";
 echo "<h2>1. Introduce Yourself</h2>";
 echo "Hi, I'm $name, I am $age years old, and my favorite color is $favColor.<br><br>";
