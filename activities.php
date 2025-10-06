@@ -136,7 +136,7 @@ echo "<h2>12. Travel Cost Estimator</h2>";
 echo "Estimated Travel Cost: ₱" . number_format($travel_cost, 2) . "<br><br>";
 ?>
 
-<a href="biodata.php">← Back to Biodata</a>
+<a href="index.php">← Back to Biodata</a>
 
 </body>
 </html>
