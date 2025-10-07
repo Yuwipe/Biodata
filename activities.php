@@ -65,19 +65,39 @@
 
 <h1>PHP Activities</h1>
 
+<h2>1. Introduce Yourself</h2>
+<form method="post">
+    Name: <input type="text" name="name" required><br>
+    Age: <input type="number" name="age" required><br>
+    Favorite Color: <input type="text" name="color" required><br>
+    <input type="submit" name="intro_submit" value="Show Introduction">
+</form>
 <?php
-$name = "Carl";
-$age = 27;
-$favColor = "black";
-echo "<h2>1. Introduce Yourself</h2>";
-echo "Hi, I'm $name, I am $age years old, and my favorite color is $favColor.<br>";
-$a = 10;
-$b = 5;
-echo "<h2>2. Simple Math</h2>";
-echo "Sum: " . ($a + $b) . "<br>";
-echo "Difference: " . ($a - $b) . "<br>";
-echo "Product: " . ($a * $b) . "<br>";
-echo "Quotient: " . ($a / $b) . "<br><br>";
+if(isset($_POST['intro_submit'])){
+    $name = $_POST['name'];
+    $age = $_POST['age'];
+    $color = $_POST['color'];
+    echo "<div class='result'>Hi, I'm $name, I am $age years old, and my favorite color is $color.</div>";
+}
+?>
+
+<h2>2. Simple Math</h2>
+<form method="post">
+    Number 1: <input type="number" name="num1" step="any" required><br>
+    Number 2: <input type="number" name="num2" step="any" required><br>
+    <input type="submit" name="math_submit" value="Calculate">
+</form>
+<?php
+if(isset($_POST['math_submit'])){
+    $a = $_POST['num1'];
+    $b = $_POST['num2'];
+    echo "<div class='result'>
+        Sum: " . ($a + $b) . "<br>
+        Difference: " . ($a - $b) . "<br>
+        Product: " . ($a * $b) . "<br>
+        Quotient: " . ($b != 0 ? $a / $b : 'Undefined (division by zero)') . "
+    </div>";
+}
 ?>
 
 <h2>3. Area and Perimeter of a Rectangle</h2>
@@ -109,10 +129,22 @@ if(isset($_POST['temp_submit'])){
 }
 ?>
 
+<h2>5. Swapping Variables</h2>
+<form method="post">
+    First Number: <input type="number" name="numA" step="any" required><br>
+    Second Number: <input type="number" name="numB" step="any" required><br>
+    <input type="submit" name="swap_submit" value="Swap Numbers">
+</form>
 <?php
-echo "<h2>5. Swapping Variables</h2>";
-$x = 10; $y = 20; $temp = $x; $x = $y; $y = $temp;
-echo "After swapping: x = $x, y = $y<br><br>";
+if(isset($_POST['swap_submit'])){
+    $x = $_POST['numA'];
+    $y = $_POST['numB'];
+    echo "<div class='result'>";
+    echo "Before Swap: x = $x, y = $y<br>";
+    $temp = $x; $x = $y; $y = $temp;
+    echo "After Swap: x = $x, y = $y";
+    echo "</div>";
+}
 ?>
 
 <h2>6. Salary Calculator</h2>
